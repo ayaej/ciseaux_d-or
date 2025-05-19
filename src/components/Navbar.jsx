@@ -19,7 +19,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="#contact" className="hover:text-gold transition">
+            <a href="/Contact" className="hover:text-gold transition">
               Contact
             </a>
           </li>
