@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/ciseaux_d-or/',
   plugins: [react()],
+  base: '/ciseaux_d-or/',   // 👈 ajoute ça
 })

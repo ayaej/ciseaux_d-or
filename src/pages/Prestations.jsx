@@ -1,4 +1,8 @@
 import React from 'react';
+import coiffure2 from '/images/coiffure2.JPG';
+import coiffureHomme from '/images/coiffure_homme.JPG';
+import barbeHomme from '/images/barbe_homme.JPG';
+import coiffureEnfant from '/images/coiffure_enfant.JPG';
 
 const prestations = [
   {
@@ -6,61 +10,60 @@ const prestations = [
     description: 'Coupe classique ou moderne adaptée à votre style.',
     duree: '30 min',
     tarif: '14 €',
-    image: '/images/coiffure2.JPG',
+    image: coiffure2,
   },
   {
     titre: 'Coupe + Barbe',
     description: 'Coupe de cheveux et taille de barbe.',
     duree: '45 min',
     tarif: '20 €',
-    image: '/images/coiffure_homme.JPG',
+    image: coiffureHomme,
   },
   {
     titre: 'Barbe',
     description: 'Entretien et taille de la barbe.',
     duree: '15 min',
     tarif: '10 €',
-    image: '/images/barbe_homme.JPG',
+    image: barbeHomme,
   },
   {
     titre: 'Coupe Enfant (-10 ans)',
     description: 'Coupe adaptée aux enfants de moins de 10 ans.',
     duree: '30 min',
     tarif: '10 €',
-    image: '/images/coiffure_enfant.JPG',
+    image: coiffureEnfant,
   },
 ];
 
-const Prestations = () => {
-  return (
-    <section className="py-16 bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-5xl font-serif text-anthracite text-center mb-8">Nos Prestations</h1>
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-          Découvrez notre gamme complète de prestations pour hommes, adaptées à tous vos besoins de coiffure et barbe.
-        </p>
-
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {prestations.map(({ titre, description, duree, tarif, image }, idx) => (
-            <article
-              key={idx}
-              className="relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow h-64 flex flex-col justify-end p-6 text-white"
-              style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            >
-              <div className="bg-black bg-opacity-50 p-4 rounded-md">
-                <h2 className="text-2xl font-semibold mb-1">{titre}</h2>
-                <p className="mb-2">{description}</p>
-                <div className="flex justify-between text-sm font-medium">
-                  <span>Durée : {duree}</span>
-                  <span>Tarif : {tarif}</span>
-                </div>
+const Prestations = () => (
+  <section 
+    className="py-16 bg-gray-100 min-h-screen"
+    aria-label="Liste des prestations de coiffure proposées"
+  >
+    <div className="max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl font-serif text-center text-gray-800 mb-12">Nos Prestations</h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {prestations.map(({ titre, description, duree, tarif, image }, index) => (
+          <article key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img
+              src={image}
+              alt={`Photo de la prestation : ${titre}`}
+              className="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-800">{titre}</h3>
+              <p className="text-gray-600 mt-2">{description}</p>
+              <div className="flex justify-between items-center mt-4">
+                <time className="text-gray-500" dateTime={`PT${parseInt(duree)}M`}>{duree}</time>
+                <span className="text-gray-800 font-bold">{tarif}</span>
               </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </article>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Prestations;
