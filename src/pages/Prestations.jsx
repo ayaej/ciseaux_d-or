@@ -4,6 +4,7 @@ import coiffureHomme from '../../public/images/coiffure_homme.JPG';
 import barbeHomme from '../../public/images/barbe_homme.JPG';
 import coiffureEnfant from '../../public/images/coiffure_enfant.JPG';
 
+// Liste des prestations mise à jour le 16/09/2025
 const prestations = [
   {
     titre: 'Coupe Homme',

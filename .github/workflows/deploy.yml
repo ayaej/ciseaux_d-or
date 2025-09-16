@@ -21,7 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
 
+      # Nettoyage du cache pour forcer une reconstruction complète
+      - name: Clean cache
+        run: npm cache clean --force
+        
       - name: Install dependencies
         run: npm ci
 
@@ -29,7 +35,10 @@ jobs:
         run: npm run build
 
       - name: Check docs contents
-        run: ls -la docs
+        run: |
+          ls -la docs
+          ls -la docs/assets
+          echo "Vérification du contenu des fichiers JS"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
