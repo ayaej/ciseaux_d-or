@@ -6,7 +6,8 @@
   "homepage": "https://ayaej.github.io/ciseaux_d-or",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "clean": "rm -rf docs",
+    "build": "npm run clean && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
