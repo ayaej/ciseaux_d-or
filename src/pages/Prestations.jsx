@@ -1,8 +1,8 @@
 import React from 'react';
-import coiffure2 from '/images/coiffure2.JPG';
-import coiffureHomme from '/images/coiffure_homme.JPG';
-import barbeHomme from '/images/barbe_homme.JPG';
-import coiffureEnfant from '/images/coiffure_enfant.JPG';
+import coiffure2 from '../../public/images/coiffure2.JPG';
+import coiffureHomme from '../../public/images/coiffure_homme.JPG';
+import barbeHomme from '../../public/images/barbe_homme.JPG';
+import coiffureEnfant from '../../public/images/coiffure_enfant.JPG';
 
 const prestations = [
   {

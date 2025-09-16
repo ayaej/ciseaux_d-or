@@ -28,8 +28,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Check dist contents
-        run: ls -la dist
+      - name: Check docs contents
+        run: ls -la docs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
