@@ -1,13 +1,13 @@
 {
-  "name": "barber-site",
+  "name": "ciseauxdor",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ayaej.github.io/ciseaux_d-or",
+  "homepage": "https://ciseauxdor.ovh",
   "scripts": {
     "dev": "vite",
     "clean": "rm -rf docs",
-    "build": "npm run clean && vite build",
+    "build": "npm run clean && vite build && cp CNAME docs/",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
