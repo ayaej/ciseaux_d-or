@@ -1,8 +1,10 @@
 import React from 'react';
-import coiffure2 from '../../public/images/coiffure2.JPG';
-import coiffureHomme from '../../public/images/coiffure_homme.JPG';
-import barbeHomme from '../../public/images/barbe_homme.JPG';
-import coiffureEnfant from '../../public/images/coiffure_enfant.JPG';
+
+// Import des images avec chemins corrects pour Vite
+const coiffure2 = '/images/coiffure2.JPG';
+const coiffureHomme = '/images/coiffure_homme.JPG';
+const barbeHomme = '/images/barbe_homme.JPG';
+const coiffureEnfant = '/images/coiffure_enfant.JPG';
 
 // Liste des prestations mise à jour le 16/09/2025
 const prestations = [
