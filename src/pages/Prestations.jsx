@@ -9,14 +9,14 @@ const prestations = [
     titre: 'Coupe Homme',
     description: 'Coupe classique ou moderne adaptée à votre style.',
     duree: '30 min',
-    tarif: '14 €',
+    tarif: '17 €',
     image: coiffure2,
   },
   {
     titre: 'Coupe + Barbe',
     description: 'Coupe de cheveux et taille de barbe.',
     duree: '45 min',
-    tarif: '20 €',
+    tarif: '25 €',
     image: coiffureHomme,
   },
   {
@@ -30,7 +30,7 @@ const prestations = [
     titre: 'Coupe Enfant (-10 ans)',
     description: 'Coupe adaptée aux enfants de moins de 10 ans.',
     duree: '30 min',
-    tarif: '10 €',
+    tarif: '12 €',
     image: coiffureEnfant,
   },
 ];
