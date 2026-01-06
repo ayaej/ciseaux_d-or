@@ -1,10 +1,11 @@
 import React from 'react';
+import heroImage from '/images/photo_arriere.JPG';
 
 const HeroSection = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center flex flex-col justify-center items-center text-white"
-      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/photo_arriere.JPG)` }}
+      style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50" />
       <div className="relative z-10 text-center px-4">
