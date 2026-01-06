@@ -1,12 +1,54 @@
-# React + Vite
+# Ciseaux d'Or
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site web professionnel pour Ciseaux d'Or, un service de coiffure et de beauté.
 
-Currently, two official plugins are available:
+## À propos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ciseaux d'Or est un site vitrine présentant les services et prestations de coiffure. Le site est conçu pour offrir une belle présentation des services et permettre aux clients de prendre contact.
 
-## Expanding the ESLint configuration
+## Stack technologique
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** - Framework frontend
+- **Vite** - Bundler et serveur de développement
+- **Tailwind CSS** - Framework CSS pour le styling
+- **PostCSS** - Outil de transformation CSS
+
+## Structure du projet
+
+```
+src/
+├── components/     # Composants réutilisables
+│   ├── Navbar.jsx
+│   ├── HeroSection.jsx
+│   ├── ServicesSection.jsx
+│   ├── PrestationsSection.jsx
+│   └── GallerySection.jsx
+├── pages/         # Pages principales
+│   ├── Home.jsx
+│   ├── Contact.jsx
+│   └── Prestations.jsx
+├── assets/        # Ressources (images, etc.)
+└── App.jsx        # Composant racine
+```
+
+## Installation
+
+```bash
+npm install
+```
+
+## Développement
+
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Déploiement
+
+Le site est hébergé sur https://ciseauxdor.ovh/
